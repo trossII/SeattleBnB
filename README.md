@@ -16,24 +16,24 @@ Data for this notebook was downloaded from Airbnb.
 
 AirBnb Data: http://insideairbnb.com/get-the-data.html
 
-The initial Data used was Summary information and metrics for listings in Seattle (good for visualisations) from the listings.csv file. But as I needed to dig deeper into the data to find correlations I moved onto using the full dataset provided under Detailed Review Data for listings in Seattle which is the listings.csv.gz file. I then began organizing these columns into features that the machine learning could use, by employing Natuaral Language Processing, Vectorizers and Scaling. In my current model the features I am using are:
+The Data files I used were to big to be placed on Github. So to use the notebooks in this Repo you will need to create a Data Folder. Inside my Data folder I have folders that that specify which year the data pertains to and place the listings file in that folder. Furthermore when you download the files they will all download as listings.csv so I recommend renaming the files as listingsmmddyysum.csv or listingsmmddyylong.csv where mmddyy refers to the month, day and year the data is from, sum refering to if it is the summary version of the data and long refering to the detailed version.
 
-'name',
-'host_is_superhost',
-'neighbourhood_cleansed',
-'neighbourhood_group_cleansed',
-'latitude',
-'longitude',
-'property_type',
-'room_type',
-'accommodates',
-'bathrooms',
-'bedrooms',
-'beds',
-'price',
-'cleaning_fee',
-'minimum_nights',
-'number_of_reviews',
+The initial Data used was "Summary information and metrics for listings in Seattle (good for visualisations)" from the listings.csv file. But as I needed to dig deeper into the data to find correlations I moved onto using the full dataset provided under "Detailed Review Data for listings in Seattle", which is the listings.csv.gz file. I then began organizing these columns into features that the machine learning could use, by employing Natuaral Language Processing, Vectorizers and Scaling. In my current model the features I am using are:
+
+'name': Allows the user to give a brief descripion of their home.
+'host_is_superhost': An AirBnB Program that increases the visibility of your listing.
+'neighbourhood_cleansed': The neighborhood where your property resides.
+'neighbourhood_group_cleansed': The macro grouping that your neighborhood belongs to.
+'latitude': Used to give the user a price more precise to their property.
+'longitude': Same as above.
+'room_type': Lets the user specify what exactly they are renting out.
+'accommodates': How many people the user would like to limit using their property.
+'bathrooms': How many bathrooms are available to guests.
+'bedrooms': How many bedrooms are available to guests.
+'beds': How many beds are available to guests. 
+'cleaning_fee'?: An added fee to cover cleaning after guest leaves. *May remove or set to average for app due to model currently overfitting this feature*.
+'minimum_nights': Set the minimum amount to nights the users will allow the guests to stay.
+'number_of_reviews': Allows the user to determine a change in price if they have prior experience on their property.
 
 
 
@@ -49,7 +49,7 @@ Upon review of the data that I was using I realized some of my features needed a
 
 ### Current Models
 
-The final models I chose to optimize were the Random Forest Regressor that I had run at the beginning and a Neural Network. To optimize the Random Forest Regressor I used GridSearchCV to find the best parameters, testing over 14 parameters in 5 different categories. For the Neural Network I tried a variety of different techniques such and lengthening or widening the layers as well as limiting the learning with techniques such as Dropout.  
+The final models I chose to optimize were the Random Forest Regressor that I had run at the beginning and a Neural Network. To optimize the Random Forest Regressor I used GridSearchCV to find the best hyperparameters, testing over 14 hyperparameters in 5 different categories. For the Neural Network I tried a variety of different techniques such and lengthening or widening the layers as well as limiting the learning with techniques such as Dropout.  
 
 
 ## Evaluation
