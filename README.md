@@ -5,10 +5,42 @@
 Since 2008, guests and hosts have used Airbnb to expand on traveling possibilities and present more unique, personalized way of experiencing the world. Ever thought about renting out your own home to put a little extra cash in your pocket but don't really know how much your home would be worth.
 
 
-
 ## Project Goal
 
 This project is for the purpose of making it simple to get a prediction of what a new property in the Seattle area is worth. Returning a rental price that would allow the property to be successfull in the the competative Seattle rental market.
+
+## Running bnb_env Environment
+This project relies on you using the [`environment.yml`](environment.yml) file to recreate the `bnb_env` conda environment. To do so, please run the following commands *in your terminal*:
+
+```bash
+# create the bnb_env conda environment
+conda env create -f environment.yml
+
+# activate the oy-env conda environment
+conda activate bnb_env
+
+# if needed, make oy-env available to you as a kernel in jupyter
+python -m ipykernel install --user --name bnb_env --display-name "Python 3 (bnb_env)"
+```
+
+Note that this may take 10 or more minutes depending on internet speed.
+
+## Directory Structure 
+
+* Notebooks
+    * Exploratory Notebooks
+        * ...
+    * Report Notebook
+        * ReportNote1.ipynb
+* Reports
+    * Visuals
+    * memo.md
+    * Presentation.pdf
+* Data # not included, see below Data Collection & Processing for instruction
+    * 2018
+    * 2019
+        * listings122019long.csv
+        * ...
 
 ## Data Collection & Processing 
 
@@ -35,7 +67,7 @@ The initial Data used was "Summary information and metrics for listings in Seatt
 'minimum_nights': Set the minimum amount to nights the users will allow the guests to stay.
 'number_of_reviews': Allows the user to determine a change in price if they have prior experience on their property.
 
-
+[For more information on data processing:](https://github.com/trossII/SeattleBnB/blob/master/Notebooks/Report%20Notebook/ReportNote1.ipynb)
 
 ## Building the Model
 
@@ -46,6 +78,7 @@ The initial First Simple Model was build using linear regression, this model had
 ### Clean up
 
 Upon review of the data that I was using, I realized some of my features needed a little cleaning. For starters some of the prices for the properties were 0 dollars and other properties had very bad overall review scores. So after removing some of these extreme outliers and unsuccessful properties I returned to optimizing my model.
+
 
 ### Current Models
 
