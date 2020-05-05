@@ -41,11 +41,11 @@ The initial Data used was "Summary information and metrics for listings in Seatt
 
 ### FSM
 
-The initial First Simple Model was build using linear regression, this model had a very small R2 score on the training data and a negative R2 score on the testing data. From there I moved onto more advanced models and ended up using a Random Forest Regressor. This first Random Forest performed much better than the FSM and had a positive R2 score around .3 on the testing data giving me hope and sending me back to reviewing my data that my model was learning from. 
+The initial First Simple Model was build using linear regression, this model had a very small R2 score on the training data and a negative R2 score on the testing data, which told me that guessing the mean for a price everytime did better than this first model. From there I moved onto more advanced models and ended up using a Random Forest Regressor. This first Random Forest performed much better than the FSM and had a positive R2 score around .3 on the testing data restoring hope and sending me back to review the data I was feeding my model. 
 
 ### Clean up
 
-Upon review of the data that I was using I realized some of my features needed a little cleaning. For starters some of the prices for the properties were 0 dollars and other properties had very bad overall review scores. So after removing some of these extreme outliers and unsuccessfull properties I returned to optimizing my model.
+Upon review of the data that I was using, I realized some of my features needed a little cleaning. For starters some of the prices for the properties were 0 dollars and other properties had very bad overall review scores. So after removing some of these extreme outliers and unsuccessful properties I returned to optimizing my model.
 
 ### Current Models
 
