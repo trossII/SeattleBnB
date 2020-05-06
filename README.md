@@ -97,3 +97,5 @@ The Mean Absolute Error I am currently recieving on my model is 35 dollars which
 
 To further evaluate the predictions that my model is not accurately predicting, I will try to find a correlation between the properties that it is least accurate on so that I can find features to better describe them. I would also like to add additional features from outside sources and see if my model can find any correlation. These features would include things such as distance from attraction, image processing, greater neighborhood details. As well as complete more tuning the machine learning hyperparameters to retrieve better accuracy with my Neural Net.
 
+[App Progress Can Be Viewed Here](https://github.com/trossII/AirBnBFlask)
+
