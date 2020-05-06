@@ -63,11 +63,13 @@ The initial Data used was "Summary information and metrics for listings in Seatt
 'bathrooms': How many bathrooms are available to guests.
 'bedrooms': How many bedrooms are available to guests.
 'beds': How many beds are available to guests. 
-'cleaning_fee'?: An added fee to cover cleaning after guest leaves. *May remove or set to average for app due to model currently overfitting this feature*.
+'cleaning_fee': An added fee to cover cleaning after guest leaves.
 'minimum_nights': Set the minimum amount to nights the users will allow the guests to stay.
 'number_of_reviews': Allows the user to determine a change in price if they have prior experience on their property.
 
-[For more information on data processing:](https://github.com/trossII/SeattleBnB/blob/master/Notebooks/Report%20Notebook/ReportNote1.ipynb)
+These features were chosen due to being easy to being general easy to complete categories for new users and will be expanded on in the future as my knowledge of the dataset continues to grow.
+
+[For more information on my data processing steps](https://github.com/trossII/SeattleBnB/blob/master/Notebooks/Report%20Notebook/ReportNote1.ipynb)
 
 ## Building the Model
 
@@ -93,5 +95,5 @@ The Mean Absolute Error I am currently recieving on my model is 35 dollars which
 
 ## Further Steps 
 
-I need to further evaluate the predictions that my model is getting totally wrong and try to find a correlation between these properties to hopefully find what my model is missing in predicting the cost of these properties. I would also like to add additional features from outside sources and see if my model can find any correlation. These features would include things such as distance from attraction, image processing, greater neighborhood details.
+To further evaluate the predictions that my model is not accurately predicting, I will try to find a correlation between the properties that it is least accurate on so that I can find features to better describe them. I would also like to add additional features from outside sources and see if my model can find any correlation. These features would include things such as distance from attraction, image processing, greater neighborhood details. As well as complete more tuning the machine learning hyperparameters to retrieve better accuracy with my Neural Net.
 
